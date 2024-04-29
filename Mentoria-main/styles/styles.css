@@ -1,0 +1,740 @@
+/* Definição das variáveis de cor */
+:root {
+    --cor-dominante: #FFFFFF;
+    /* Cor dominante, geralmente usada como fundo */
+    --cor-secundaria: #333333;
+    /* Cor secundária, geralmente usada para texto */
+    --cor-destaque: #333333;
+    /* Cor de destaque, usada para links e elementos destacados */
+    --light-bg: #fff;
+    /* Cor de fundo clara */
+    --light-text: #333;
+    /* Cor do texto em fundo claro */
+    --dark-bg: #222;
+    /* Cor de fundo escura */
+    --dark-text: #FFFFFF;
+    /* Cor do texto em fundo escuro */
+}
+
+/* Estilos gerais do body */
+body {
+    background-color: var(--cor-dominante);
+    /* Cor de fundo */
+    color: var(--cor-secundaria);
+    /* Cor do texto */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave ao alterar as cores */
+    display: flex;
+    /* Display flexível para alinhamento vertical */
+    flex-direction: column;
+    /* Organização em coluna */
+    min-height: 100vh;
+    /* Altura mínima da viewport */
+    margin: 0;
+    /* Remover margens padrão */
+    font-family: Arial, sans-serif;
+    /* Fonte padrão */
+}
+
+/* Estilos para elementos container */
+.container {
+    flex: 1;
+    /* Ocupar todo o espaço vertical disponível */
+    text-align: center;
+    /* Alinhamento central do texto */
+    padding: 50px 0;
+    /* Preenchimento superior e inferior */
+}
+
+/* Estilos para links */
+a {
+    text-decoration: none;
+    /* Remover sublinhado dos links */
+}
+
+/* Estilos para botões */
+.button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Estilos para botões de alternância */
+.toggle-dark-mode {
+    justify-content: flex-start;
+    /* Ajusta o alinhamento horizontal para o início do contêiner */
+    float: none;
+    /* Remove a flutuação */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    position: absolute;
+    padding: 17px 27px;
+    top: 20px;
+    left: 20px;
+    /* Ajusta a posição para a esquerda */
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.toggle-dark-mode:hover {
+    background-color: #444;
+    /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para o modo escuro */
+.dark-mode {
+    background-color: var(--dark-bg);
+    /* Cor de fundo no modo escuro */
+    color: var(--dark-text);
+    /* Cor do texto no modo escuro */
+}
+
+/*-----------------------------------------------agenda-----------------------------------------------*/
+h1 {
+    font-size: 39px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.agenda {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.dark-mode .agenda {
+    color: var(--light-text);
+}
+
+.evento {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.adicionar-compromisso {
+    margin-top: 20px;
+}
+
+.adicionar-compromisso h2 {
+    margin-bottom: 10px;
+}
+
+.adicionar-compromisso input {
+    margin-bottom: 10px;
+}
+
+.adicionar-compromisso button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.adicionar-compromisso button:hover {
+    background-color: #2980b9;
+}
+
+/*-----------------------------------------------artigos------------------------------------------------*/
+.article {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.dark-mode .article {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--cor-destaque);
+}
+
+.dark-mode .article h2 {
+    color: var(--dark-text);
+}
+
+.article p {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+}
+
+.article a {
+    color: #333;
+    /* Mantido o azul original */
+    text-decoration: none;
+    font-weight: bold;
+    /* Adicionado negrito */
+    font-size: 18px;
+    /* Aumentado o tamanho do texto */
+}
+
+.dark-mode .article a {
+    color: #ffffff;
+    /* Mantido o azul original */
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos específicos para links de "Leia mais" */
+.read-more-link {
+    color: #ff4500;
+    /* Laranja */
+    border-bottom: 2px solid transparent;
+    /* Linha de baixo */
+    transition: border-bottom 0.3s;
+    /* Transição suave */
+    margin-top: 10px;
+    /* Espaço entre o parágrafo e o link */
+}
+
+.read-more-link:hover {
+    border-bottom: 2px solid #ff4500;
+    /* Linha de baixo ao passar o mouse */
+}
+
+/* Botão para voltar à página inicial */
+.back-button {
+    justify-content: flex-end;
+    float: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    position: absolute;
+    padding: 17px 27px;
+    top: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
+
+/*----------------------------------------ferramentasDeComunicacao---------------------------------------*/
+.homepage-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    /* Para centralizar os itens verticalmente */
+}
+
+.homepage-links a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-size: 20px;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+
+.homepage-links a:hover {
+    color: #444;
+}
+
+.dark-mode .homepage-links a {
+    color: #fff;
+    /* Cor no modo escuro */
+}
+
+
+/* Estilos para os botões de Login e Criar Conta */
+.login-register-links {
+    position: absolute;
+    top: 50px;
+    /* 50 pixels from the top */
+    right: 20px;
+    /* 20 pixels from the right */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    /* Para centralizar os itens verticalmente */
+}
+
+.login-register-links a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 13px;
+    font-weight: bold;
+    background: #3498db;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 30px;
+    margin-left: 05px;
+}
+
+.login-register-links a:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/*------------------------------------------------login--------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para os formulários */
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="tel"],
+.form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container select:focus {
+    border-color: #007bff;
+}
+
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/*------------------------------------------------mensagem--------------------------------------------------*/
+
+.chatbox {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.message {
+    background-color: #fff;
+    padding: 10px 15px;
+    margin: 5px 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    align-self: flex-start;
+}
+
+.message.sent {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+}
+
+.message-input {
+    padding: 10px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-input input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    /* border: none; */
+    /* border-radius: 4px; */
+    margin-right: 10px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 20px;
+}
+
+.message-input button {
+    padding: 11px 15px;
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.message-input button:hover {
+    background-color: #2980b9;
+}
+
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+.dark-mode .chatbox {
+    background-color: #333;
+    /* Nova cor de fundo para a chatbox no modo escuro */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    /* Ajuste na sombra para melhor contraste */
+}
+
+.dark-mode .message {
+    color: #000;
+    /* Cor do texto preto no modo escuro */
+}
+
+/*------------------------------------------------mentor--------------------------------------------------*/
+.container {
+    flex: 1;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* Adicionado para animar a transição */
+}
+
+.card-container {
+    position: relative;
+    /* Adicionado */
+    flex: auto;
+    cursor: pointer;
+    /* Adicionado */
+}
+
+.mini-card {
+    min-width: 300px;
+    min-height: 350px;
+    box-shadow: -2rem 0 3rem -2rem #000;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: linear-gradient(85deg, #3498db, #262626);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.mini-card.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.mentor-name {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.mentor-description {
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.carousel-content:hover .mini-card:not(.active) {
+    opacity: 0.5;
+}
+
+h1 {
+    text-align: center;
+    margin: 0.67em 0;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 34px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0.67em 0;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 26px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    margin-top: auto;
+    /* Este é o truque para o sticky footer */
+    text-align: center;
+}
+
+.footer-dark {
+    text-align: center;
+    background-color: #262626;
+    color: #FFFFFF;
+    padding: 20px;
+    margin-top: auto;
+    /* Este é o truque para o sticky footer */
+    text-align: center;
+}
+
+/*-----------------------------------------------SingUp----------------------------------------------------*/
+
+.form-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="tel"],
+.form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container select:focus {
+    border-color: #007bff;
+}
+
+.form-container input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/*-------------------------------------------------videos--------------------------------------------------*/
+
+.container {
+    flex: 1;
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+.toggle-dark-mode:hover {
+    background-color: #444;
+}
+
+/* Estilo para os vídeos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.video-box {
+    width: 300px;
+    height: 200px;
+    background-color: #f0f0f0;
+    margin-right: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-description {
+    max-width: 300px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo para o botão de voltar à página inicial */
+.back-button {
+    justify-content: flex-end;
+    /* Ajusta o alinhamento horizontal para o final do contêiner */
+    float: none;
+    /* Remove a flutuação */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    position: absolute;
+    padding: 17px 27px;
+    top: 20px;
+    right: 20px;
+    /* Ajusta a posição para a direita */
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: background-color 0.6s;
+    z-index: 2;
+}
+
+/*------------------------------------------------workshop-------------------------------------------------*/
+
+.workshop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.workshop-item {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    max-width: 400px;
+}
+
+.workshop img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.workshop-content {
+    padding: 20px;
+}
+
+.workshop-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--cor-destaque);
+}
+
+.workshop-description {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+}
+
+.dark-mode .workshop-item {
+    color: var(--light-text);
+}

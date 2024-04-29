@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>Sign Up - Projeto de Mentoria</title>
+    <link rel="shortcut icon" type="imagex/png" href="./icon/icon.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+
+    <!-- Formulário de Sign Up -->
+    <div class="form-container" id="signup-form">
+        <h2>Sign Up</h2>
+        <form action="signup_process.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido">
+
+            <label for="sexo">Escolha o sexo:</label>
+            <select name="sexo" id="sexo" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telemovel">Telemóvel:</label>
+            <input type="tel" id="telemovel" name="telemovel" class="telemovel" pattern="[0-9]{9}"
+                title="Apenas números permitidos" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirmar a Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

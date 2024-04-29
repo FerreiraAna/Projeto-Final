@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Mentoria</title>
+    <link rel="shortcut icon" type="imagex/png" href="./icon/icon.png">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <!-- Botão para ativar o modo escuro -->
+    <button class="toggle-dark-mode">Ativar Modo Escuro</button>
+    <div class="container">
+        <section class="section">
+            <h1 class="section-title">Correspondência de Mentores</h1>
+            <div class="section-content carousel">
+                <div class="carousel-content">
+                    <div class="card-container" onclick="centerMentor(this)">
+                        <div class="mini-card active">
+                            <h3 class="mentor-name">Mentor 1</h3>
+                            <p class="mentor-description">Descrição do Mentor 1...</p>
+                        </div>
+                    </div>
+                    <div class="card-container" onclick="centerMentor(this)">
+                        <div class="mini-card">
+                            <h3 class="mentor-name">Mentor 2</h3>
+                            <p class="mentor-description">Descrição do Mentor 2...</p>
+                        </div>
+                    </div>
+                    <div class="card-container" onclick="centerMentor(this)">
+                        <div class="mini-card">
+                            <h3 class="mentor-name">Mentor 3</h3>
+                            <p class="mentor-description">Descrição do Mentor 3...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Plataforma de Mentoria - Todos os direitos reservados</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
