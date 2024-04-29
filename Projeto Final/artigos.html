@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Mentoria - Artigos</title>
+    <link rel="shortcut icon" type="imagex/png" href="./icon.png">
+    <style>
+        /* Estilos gerais */
+        :root {
+            --cor-dominante: #FFFFFF;
+            --cor-secundaria: #333333;
+            --cor-destaque: #333333;
+            --light-bg: #fff;
+            --light-text: #333;
+            --dark-bg: #222;
+            --dark-text: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--light-text);
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            flex: 1;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 39px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .article {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .dark-mode .article {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .article h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--cor-destaque);
+        }
+
+        .dark-mode .article h2 {
+            color: var(--dark-text);
+        }
+
+        .article p {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+        }
+
+        .article a {
+            color: #333;
+            /* Mantido o azul original */
+            text-decoration: none;
+            font-weight: bold;
+            /* Adicionado negrito */
+            font-size: 18px;
+            /* Aumentado o tamanho do texto */
+        }
+
+        .dark-mode .article a {
+            color: #ffffff;
+            /* Mantido o azul original */
+        }
+
+        .article a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos específicos para links de "Leia mais" */
+        .read-more-link {
+            color: #ff4500;
+            /* Laranja */
+            border-bottom: 2px solid transparent;
+            /* Linha de baixo */
+            transition: border-bottom 0.3s;
+            /* Transição suave */
+            margin-top: 10px;
+            /* Espaço entre o parágrafo e o link */
+        }
+
+        .read-more-link:hover {
+            border-bottom: 2px solid #ff4500;
+            /* Linha de baixo ao passar o mouse */
+        }
+
+        /* Botão para alternar o modo escuro */
+        .toggle-dark-mode {
+            justify-content: flex-start;
+            float: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            position: absolute;
+            padding: 17px 27px;
+            top: 20px;
+            left: 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            transition: background-color 0.6s;
+            z-index: 2;
+        }
+
+        .toggle-dark-mode:hover {
+            background-color: #444;
+        }
+
+        .dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        /* Botão para voltar à página inicial */
+        .back-button {
+            justify-content: flex-end;
+            float: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            position: absolute;
+            padding: 17px 27px;
+            top: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            transition: background-color 0.6s;
+            z-index: 2;
+        }
+
+        .back-button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botão para alternar o modo escuro -->
+    <button class="toggle-dark-mode">Ativar Modo Escuro</button>
+    <!-- Botão para voltar à página inicial -->
+    <button class="back-button">Voltar à Página Inicial</button>
+    <div class="container">
+        <h1>Artigos</h1>
+        <!-- Artigo 1 -->
+        <div class="article">
+            <h2>Título do Artigo 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida in justo nec rhoncus. Sed suscipit
+                sapien ut urna bibendum, vitae dictum ipsum sodales. <a href="#" class="read-more-link">Leia mais...</a>
+            </p>
+        </div>
+        <!-- Artigo 2 -->
+        <div class="article">
+            <h2>Título do Artigo 2</h2>
+            <p>Quisque quis lacus vel mi tristique volutpat a eget erat. Nam eget semper eros. Fusce tristique justo
+                sit amet turpis efficitur, sit amet dapibus odio congue. <a href="#" class="read-more-link">Leia
+                    mais...</a></p>
+        </div>
+        <!-- Adicione mais artigos conforme necessário -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Plataforma de Mentoria - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Adicionar funcionalidade ao botão de alternância do modo escuro
+            const toggleDarkModeButton = document.querySelector('.toggle-dark-mode');
+            toggleDarkModeButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                // Adicionar lógica para persistir o estado do modo escuro
+                localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            });
+            const backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', () => {
+                window.location.href = 'paginaInicial.html'; // Altere 'paginainicial.html' para o caminho correto
+            });
+
+            // Verificar se o modo escuro foi ativado anteriormente
+            const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (isDarkModeEnabled) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+
+</html>

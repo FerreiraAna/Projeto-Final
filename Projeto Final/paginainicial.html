@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Mentoria - Página Inicial</title>
+    <link rel="shortcut icon" type="imagex/png" href="./icon.png">
+    <style>
+        :root {
+            --cor-dominante: #FFFFFF;
+            --cor-secundaria: #333333;
+            --cor-destaque: #333333;
+            --light-bg: #fff;
+            --light-text: #333;
+            --dark-bg: #222;
+            --dark-text: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--cor-dominante);
+            color: var(--cor-secundaria);
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            flex: 1;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 39px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .homepage-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            align-items: center;
+            /* Para centralizar os itens verticalmente */
+        }
+
+        .homepage-links a {
+            text-decoration: none;
+            color: var(--cor-destaque);
+            font-size: 20px;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        .homepage-links a:hover {
+            color: #444;
+        }
+
+        .dark-mode .homepage-links a {
+            color: #fff;
+            /* Cor no modo escuro */
+        }
+
+
+        /* Estilo para o botão de alternância do modo escuro */
+        .toggle-dark-mode {
+            justify-content: flex-start;
+            /* Ajusta o alinhamento horizontal para o início do contêiner */
+            float: none;
+            /* Remove a flutuação */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            position: absolute;
+            padding: 17px 27px;
+            top: 20px;
+            left: 20px;
+            /* Ajusta a posição para a esquerda */
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            transition: background-color 0.6s;
+            z-index: 2;
+        }
+
+        .toggle-dark-mode:hover {
+            background-color: #444;
+        }
+
+        .dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        /* Estilos para os botões de Login e Criar Conta */
+        .login-register-links {
+            position: absolute;
+            top: 50px;
+            /* 50 pixels from the top */
+            right: 20px;
+            /* 20 pixels from the right */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            /* Para centralizar os itens verticalmente */
+        }
+
+        .login-register-links a {
+            font-size: 17px;
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 13px;
+            font-weight: bold;
+            background: #3498db;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            border-radius: 30px;
+            margin-left: 05px;
+        }
+
+        .login-register-links a:hover {
+            background-color: #444;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botão para alternar o modo escuro -->
+    <button class="toggle-dark-mode">Ativar Modo Escuro</button>
+    <div class="container">
+        <h1>Bem-vindo à Plataforma de Mentoria!</h1>
+        <!-- Botões de Login e Criar Conta -->
+        <div class="login-register-links">
+            <a href="Login.html">Login</a>
+            <a href="SingUp.html">Criar Conta</a>
+        </div>
+        <!-- Links para diferentes seções -->
+        <div class="homepage-links">
+            <a href="artigos.html">Artigos</a>
+            <a href="videos.html">Vídeos</a>
+            <a href="workshops.html">Workshops</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Plataforma de Mentoria - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Adicionar funcionalidade ao botão de alternância do modo escuro
+            const toggleDarkModeButton = document.querySelector('.toggle-dark-mode');
+            toggleDarkModeButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                // Adicionar lógica para persistir o estado do modo escuro
+                localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+            });
+
+            // Verificar se o modo escuro foi ativado anteriormente
+            const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (isDarkModeEnabled) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+
+</html>

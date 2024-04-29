@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Mentoria - Workshops</title>
+    <link rel="shortcut icon" type="imagex/png" href="./icon.png">
+    <style>
+        :root {
+            --cor-dominante: #FFFFFF;
+            --cor-secundaria: #333333;
+            --cor-destaque: #333333;
+            --light-bg: #fff;
+            --light-text: #333;
+            --dark-bg: #222;
+            --dark-text: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--cor-dominante);
+            color: var(--cor-secundaria);
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            flex: 1;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 39px;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        .workshop {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .workshop-item {
+            background-color: var(--light-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            max-width: 400px;
+        }
+
+        .workshop img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .workshop-content {
+            padding: 20px;
+        }
+
+        .workshop-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--cor-destaque);
+        }
+
+        .workshop-description {
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+        }
+
+        /* Estilo para o botão de voltar */
+        .back-button {
+            justify-content: flex-end;
+            /* Ajusta o alinhamento horizontal para o final do contêiner */
+            float: none;
+            /* Remove a flutuação */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            position: absolute;
+            padding: 17px 27px;
+            top: 20px;
+            right: 20px;
+            /* Ajusta a posição para a direita */
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            transition: background-color 0.6s;
+            z-index: 2;
+        }
+
+        .back-button:hover {
+            background-color: #444;
+        }
+
+        /* Estilo para o botão de alternância do modo escuro */
+        .toggle-dark-mode {
+            justify-content: flex-start;
+            /* Ajusta o alinhamento horizontal para o início do contêiner */
+            float: none;
+            /* Remove a flutuação */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            position: absolute;
+            padding: 17px 27px;
+            top: 20px;
+            left: 20px;
+            /* Ajusta a posição para a esquerda */
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 23px;
+            cursor: pointer;
+            transition: background-color 0.6s;
+            z-index: 2;
+        }
+
+        .toggle-dark-mode:hover {
+            background-color: #444;
+        }
+
+        /* Estilo para o modo escuro */
+        .dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+
+        .dark-mode .workshop-item {
+            color: var(--light-text);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botão para alternar o modo escuro -->
+    <button class="toggle-dark-mode">Ativar Modo Escuro</button>
+    <!-- Botão para voltar para a página inicial -->
+    <button class="back-button">Voltar para a Página Inicial</button>
+    <div class="container">
+        <h1>Workshops</h1>
+        <div class="workshop">
+            <div class="workshop-item">
+                <img src="img2.jpeg" alt="Workshop 1">
+                <div class="workshop-content">
+                    <h2 class="workshop-title">Título do Workshop 1</h2>
+                    <p class="workshop-description">Descrição do Workshop 1.</p>
+                </div>
+            </div>
+            <div class="workshop-item">
+                <img src="img3.jpeg" alt="Workshop 2">
+                <div class="workshop-content">
+                    <h2 class="workshop-title">Título do Workshop 2</h2>
+                    <p class="workshop-description">Descrição do Workshop 2.</p>
+                </div>
+            </div>
+            <!-- Adicione mais workshops conforme necessário -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Plataforma de Mentoria - Todos os direitos reservados</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Adicionar funcionalidade ao botão de alternância do modo escuro
+            const toggleDarkModeButton = document.querySelector('.toggle-dark-mode');
+            toggleDarkModeButton.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                // Adicionar lógica para persistir o estado do modo escuro
+                localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'true' : 'false');
+            });
+
+            // Adicionar funcionalidade ao botão "Voltar para a Página Inicial"
+            const backButton = document.querySelector('.back-button');
+            backButton.addEventListener('click', () => {
+                window.location.href = 'paginaInicial.html'; // Substitua 'index.html' pelo caminho correto para sua página inicial
+            });
+
+            // Verificar se o modo escuro foi ativado anteriormente
+            const isDarkModeEnabled = localStorage.getItem('darkMode') === 'true';
+            if (isDarkModeEnabled) {
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</body>
+
+</html>

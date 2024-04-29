@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Mentoria</title>
+  <style>
+    :root {
+      --cor-dominante: #FFFFFF;
+      --cor-secundaria: #3498db;
+      --cor-destaque: #333333;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--cor-dominante);
+      /* Cor dominante */
+      color: var(--cor-secundaria);
+      /* Cor secundária */
+    }
+
+    header {
+      background-color: var(--cor-dominante);
+      /* Cor dominante */
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: var(--cor-secundaria);
+      /* Cor secundária */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--cor-dominante);
+      /* Cor dominante */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      color: var(--cor-secundaria);
+      /* Cor secundária */
+    }
+
+    h1 {
+      color: var(--cor-destaque);
+      /* Cor de destaque */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--cor-destaque);
+      /* Cor de destaque */
+    }
+
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      flex: 0 1 calc(30% - 20px);
+      /* Ajustado o tamanho dos cards */
+      background-color: var(--cor-dominante);
+      /* Cor dominante */
+      color: var(--cor-secundaria);
+      /* Cor secundária */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+      /* Adicionado alinhamento ao centro */
+      transition: all 0.3s ease;
+      /* Adicionada uma transição suave */
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      color: var(--cor-destaque);
+      /* Cor de destaque */
+    }
+
+    .card p {
+      color: var(--cor-secundaria);
+      /* Cor secundária */
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--cor-secundaria);
+      background-color: var(--cor-dominante);
+      color: var(--cor-secundaria);
+    }
+
+    footer a {
+      color: var(--cor-destaque);
+      /* Cor de destaque */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Plataforma de Mentoria</h1>
+  </header>
+  <div class="container">
+    <section class="section">
+      <h2 class="section-title">Correspondência de Mentores</h2>
+      <div class="section-content">
+        <!-- Cards de mentores sugeridos -->
+        <div class="card">
+          <h2>Mentor 1</h2>
+          <p>Descrição do mentor 1</p>
+        </div>
+        <div class="card">
+          <h2>Mentor 2</h2>
+          <p>Descrição do mentor 2</p>
+        </div>
+        <div class="card">
+          <h2>Mentor 3</h2>
+          <p>Descrição do mentor 3</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Recursos de Mentoria</h2>
+      <div class="section-content">
+        <!-- Lista de recursos -->
+        <div class="card">
+          <h2>Artigos</h2>
+          <p>Lista de artigos sobre desenvolvimento pessoal, carreira, etc.</p>
+        </div>
+        <div class="card">
+          <h2>Vídeos</h2>
+          <p>Lista de vídeos educacionais sobre diversos temas.</p>
+        </div>
+        <div class="card">
+          <h2>Webinars</h2>
+          <p>Agenda de webinars futuros sobre tópicos relevantes.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Ferramentas de Comunicação</h2>
+      <div class="section-content">
+        <!-- Ferramentas de comunicação -->
+        <div class="card">
+          <h2>Mensagens</h2>
+          <p>Caixa de entrada para comunicação segura com mentores.</p>
+        </div>
+        <div class="card">
+          <h2>Agenda</h2>
+          <p>Agendamento de reuniões e acompanhamento de compromissos.</p>
+        </div>
+        <div class="card">
+          <h2>Compartilhamento de Documentos</h2>
+          <p>Recursos para compartilhamento de documentos e arquivos.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Definição de Metas e Acompanhamento do Progresso</h2>
+      <div class="section-content">
+        <!-- Definição de metas e progresso -->
+        <div class="card">
+          <h2>Estabelecer Metas</h2>
+          <p>Definir metas de curto e longo prazo para o desenvolvimento pessoal.</p>
+        </div>
+        <div class="card">
+          <h2>Acompanhar Progresso</h2>
+          <p>Acompanhamento do progresso das metas e objetivos definidos.</p>
+        </div>
+        <div class="card">
+          <h2>Feedback dos Mentores</h2>
+          <p>Feedback e orientação dos mentores sobre o progresso do mentorando.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Fóruns da Comunidade</h2>
+      <div class="section-content">
+        <!-- Fóruns da comunidade -->
+        <div class="card">
+          <h2>Fóruns de Discussão</h2>
+          <p>Espaço para interação com outros alunos e compartilhamento de experiências.</p>
+        </div>
+        <div class="card">
+          <h2>Sala de Chat</h2>
+          <p>Chat em tempo real para tirar dúvidas e buscar conselhos.</p>
+        </div>
+        <div class="card">
+          <h2>Grupos de Estudo</h2>
+          <p>Grupos de estudo online para colaboração acadêmica.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title">Eventos e Workshops</h2>
+      <div class="section-content">
+        <!-- Eventos e workshops -->
+        <div class="card">
+          <h2>Eventos Virtuais</h2>
+          <p>Agenda de eventos virtuais sobre diversos temas de interesse.</p>
+        </div>
+        <div class="card">
+          <h2>Workshops</h2>
+          <p>Agenda de workshops presenciais e online para aprendizado prático.</p>
+        </div>
+        <div class="card">
+          <h2>Sessões de Networking</h2>
+          <p>Encontros para networking e conexão com profissionais experientes.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2024 Plataforma de Mentoria - Todos os direitos reservados</p>
+  </footer>
+</body>
+
+</html>
